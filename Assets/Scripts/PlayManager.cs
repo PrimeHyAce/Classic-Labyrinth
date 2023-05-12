@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject finishedCanvas;
+    [SerializeField] TMP_Text finishedText;
+    int coin = 100; // 100円玉の数
+
+    public void GameOver()
     {
-        
+        finishedText.text = "Game Over";
+        finishedCanvas.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayerWin()
     {
-        
+        finishedText.text = "You Win!\nScore: " + GetScore() + "";
+        finishedCanvas.SetActive(true);
+    }
+
+    private int GetScore()
+    {
+        return coin * 10;
     }
 }
