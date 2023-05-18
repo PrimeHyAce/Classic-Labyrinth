@@ -4,15 +4,52 @@ using UnityEngine;
 
 public class GravityController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] float acceleration = 9.81f;
+
+    Vector3 gravityOffset = Vector3.zero;
+
+    bool isActive = true;
+    private void Start() {
+        if(SystemInfo.supportsGyroscope) {
+            Input.gyro.enabled = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Update() {
+        if(isActive)
+        {
+            Physics.gravity = GetGravityFromSensor() + gravityOffset;
+        }
+        else
+        {
+            Physics.gravity = Vector3.zero;
+        }
+        //CalibrateGravity();
+    }
+
+    public void CalibrateGravity() {
+        gravityOffset = Vector3.down * acceleration - GetGravityFromSensor();
+    }
+
+    public Vector3 GetGravityFromSensor(){
+        Vector3 gravity;
+        if(Input.gyro.gravity != Vector3.zero) {
+            gravity = Input.gyro.gravity * acceleration;
+        } else {
+            gravity = Input.acceleration * acceleration;
+        }
+
+        gravity.z = Mathf.Clamp(gravity.z, float.MinValue, -1f);
+        return new Vector3(gravity.x, gravity.z, gravity.y);
+    }
+
+    public void SetActive(bool value) {
+        isActive = value;
+        if(value){
+            Time.timeScale = 1f;
+        }
+        else{
+            Time.timeScale = 0f;
+        }
     }
 }
