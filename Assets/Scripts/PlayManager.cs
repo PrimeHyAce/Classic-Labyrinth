@@ -7,7 +7,7 @@ public class PlayManager : MonoBehaviour
 {
     [SerializeField] GameObject finishedCanvas;
     [SerializeField] TMP_Text finishedText;
-    int coin = 100; // 100円玉の数
+    int coin = 100;
 
     public void GameOver()
     {
