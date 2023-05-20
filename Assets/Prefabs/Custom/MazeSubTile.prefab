@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612579991407400841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.49999997}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2542236943350724404}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 3290430209390381534}
   - component: {fileID: 5393760558684718461}
   m_Layer: 0
-  m_Name: OutsideSubTile
+  m_Name: MazeSubTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 6505816488604762049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 3, y: 2, z: 3}
+  m_LocalScale: {x: 3, y: 2, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3541634554318860088}
@@ -223,8 +223,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6721679815117813927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
-  m_LocalScale: {x: 0.6, y: 1.2, z: 0.6}
+  m_LocalPosition: {x: 0, y: 0.049, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.5, z: 0.49999997}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2542236943350724404}
@@ -258,7 +258,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6e1d5c048d3ec914aab12aa6d6836cf7, type: 2}
+  - {fileID: 2100000, guid: 677605c34bb592e4db39513ae3bd4417, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
