@@ -8,11 +8,15 @@ public class Countdown : MonoBehaviour
 {
     [SerializeField] int duration;
 
+    public UnityEvent OnPromptStarted = new UnityEvent();
     public UnityEvent OnCountFinished = new UnityEvent();
     public UnityEvent<int> OnCount = new UnityEvent<int>();
     bool isCounting;
     Sequence seq;
 
+    private void Start() {
+        OnPromptStarted.Invoke();
+    }
 
     public void StartCountdown(){
         

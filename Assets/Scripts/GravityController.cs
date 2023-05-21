@@ -14,7 +14,7 @@ public class GravityController : MonoBehaviour
             Input.gyro.enabled = true;
         }
 
-        CalibrateGravity();
+        //CalibrateGravity();
     }
 
     private void Update() {
@@ -42,7 +42,7 @@ public class GravityController : MonoBehaviour
         }
 
         //gravity landscape
-        gravity = Quaternion.Euler(0f, 0f, -90f) * gravity;
+        //gravity = Quaternion.Euler(0f, 0f, -90f) * gravity;
 
         gravity.z = Mathf.Clamp(gravity.z, float.MinValue, -1f);
         return new Vector3(gravity.x, gravity.z, gravity.y);
