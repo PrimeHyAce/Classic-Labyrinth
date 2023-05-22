@@ -10,11 +10,8 @@ Gameplay:
 - Make sure the ball stays out of the water. 
 - The goal is to reach the green hole within the time limit.
 
-Main Menu
-![image](https://github.com/PrimeHyAce/Classic-Labyrinth/assets/77986121/0bc143ee-81d8-46d2-becf-2f4f493065e4 = 540 x 1200)
-
-Gameplay
-![image](https://github.com/PrimeHyAce/Classic-Labyrinth/assets/77986121/2378adc7-67f2-4e10-b296-7ce8508594c3)
+Screenshot
+![Frame 1 (3)](https://github.com/PrimeHyAce/Classic-Labyrinth/assets/77986121/3b6547fe-fb38-46cb-896b-a564d0310a0a)
 
 If you want to play the game, you can download it from the release or simply get it from the following link:
 https://drive.google.com/file/d/14hDNltkqB5Svt8Io_HSNR6YjGvtPFr0v/view?usp=sharing
