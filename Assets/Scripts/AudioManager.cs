@@ -67,6 +67,12 @@ public class AudioManager : MonoBehaviour
         var db = VolToDB(vol);
         mixer.SetFloat("BGM_ATTENUATION",db);
         PlayerPrefs.SetFloat("BGM_ATTENUATION",db);
+
+        if (db == -80) {
+            bgmToggle.SetIsOnWithoutNotify(true);
+        } else {
+            bgmToggle.SetIsOnWithoutNotify(false);
+        }
     }
 
     private void SetSfxVol(float vol)
@@ -74,6 +80,12 @@ public class AudioManager : MonoBehaviour
         var db = VolToDB(vol);
         mixer.SetFloat("SFX_ATTENUATION",db);
         PlayerPrefs.SetFloat("SFX_ATTENUATION",db);
+
+        if (db == -80) {
+            sfxToggle.SetIsOnWithoutNotify(true);
+        } else {
+            sfxToggle.SetIsOnWithoutNotify(false);
+        }
     }
 
     public void SetBgmMute(bool isMute)
