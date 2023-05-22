@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class PlayManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayManager : MonoBehaviour
     [SerializeField] TMP_Text finishedText;
 
     [SerializeField] float timer;
+
+    public UnityEvent OnTimerEnd = new UnityEvent();
 
     public bool gameOn;
 
@@ -34,7 +37,8 @@ public class PlayManager : MonoBehaviour
             if(timer <= 0)
             {
                 gameOn = false;
-                GameOver();
+                timerText.text = "00:00";
+                OnTimerEnd.Invoke();                
             }
         }
     }
@@ -42,6 +46,12 @@ public class PlayManager : MonoBehaviour
     public void GameOver()
     {
         finishedText.text = "Game Over\nPlease Try Again!";
+        finishedCanvas.SetActive(true);
+    }
+
+    public void TimeOut()
+    {
+        finishedText.text = "Time Out\nPlease Try Again!";
         finishedCanvas.SetActive(true);
     }
 
