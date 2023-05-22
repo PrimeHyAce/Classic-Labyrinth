@@ -11,7 +11,7 @@ Gameplay:
 - The goal is to reach the green hole within the time limit.
 
 Main Menu
-![image](https://github.com/PrimeHyAce/Classic-Labyrinth/assets/77986121/52ba97c8-8c77-41da-bd84-704264a45b45)
+<img align=”left” size="50%" src=”(https://github.com/PrimeHyAce/Classic-Labyrinth/assets/77986121/52ba97c8-8c77-41da-bd84-704264a45b45)″>
 
 Gameplay
 ![image](https://github.com/PrimeHyAce/Classic-Labyrinth/assets/77986121/2378adc7-67f2-4e10-b296-7ce8508594c3)
