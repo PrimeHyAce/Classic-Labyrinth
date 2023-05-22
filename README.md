@@ -14,4 +14,4 @@ Screenshot
 ![Frame 1 (3)](https://github.com/PrimeHyAce/Classic-Labyrinth/assets/77986121/3b6547fe-fb38-46cb-896b-a564d0310a0a)
 
 If you want to play the game, you can download it from the release or simply get it from the following link:
-https://drive.google.com/file/d/14hDNltkqB5Svt8Io_HSNR6YjGvtPFr0v/view?usp=sharing
+https://drive.google.com/file/d/1pL2mqs3Ksy0aA3DkAN7raUB0GvWJSDv5/view?usp=sharing
