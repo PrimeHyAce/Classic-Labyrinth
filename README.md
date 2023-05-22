@@ -1,5 +1,12 @@
 # Classic-Labyrinth
- Mobile Game - Classic Labyrinth
+ Mobile Game - Classic Maze
+
+Gameplay:
 
 
-https://drive.google.com/file/d/1Iv_2FKvw0fxp08rDNWsSfTa0eOuL1mVJ/view?usp=sharing
+Main Menu
+
+Gameplay
+
+If you want to play the game, you can download it from the release or simply get it from the following link:
+https://drive.google.com/file/d/14hDNltkqB5Svt8Io_HSNR6YjGvtPFr0v/view?usp=sharing
