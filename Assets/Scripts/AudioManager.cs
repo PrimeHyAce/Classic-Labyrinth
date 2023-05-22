@@ -20,13 +20,31 @@ public class AudioManager : MonoBehaviour
         var volBgm = DbToVol(dbBgm);
         mixer.SetFloat("BGM_ATTENUATION",dbBgm);
         bgmSlider.SetValueWithoutNotify(volBgm);
-        bgmToggle.isOn = dbBgm == -80 ? true : false;
 
         var dbSfx = PlayerPrefs.GetFloat("SFX_ATTENUATION",0);
         var volSfx = DbToVol(dbSfx);
         mixer.SetFloat("SFX_ATTENUATION",dbSfx);
         sfxSlider.SetValueWithoutNotify(volSfx);  
-        sfxToggle.isOn = dbSfx == -80 ? true : false;       
+
+        if(dbBgm == -80) {
+            bgmToggle.SetIsOnWithoutNotify(true);
+        }
+
+        if(dbSfx == -80) {
+            sfxToggle.SetIsOnWithoutNotify(true);
+        }
+
+        // Check if previously muted 
+        bool bgmMuted = PlayerPrefs.GetInt("BGM_MUTED", 0) == 1;    
+        bool sfxMuted = PlayerPrefs.GetInt("SFX_MUTED", 0) == 1;
+            
+        if(bgmMuted) {
+            SetBgmMute(true);  
+        }
+        if(sfxMuted) {
+            SetSfxMute(true);
+        } 
+               
     }
 
     private void OnEnable() {
@@ -64,6 +82,7 @@ public class AudioManager : MonoBehaviour
         {
             mixer.SetFloat("BGM_ATTENUATION",-80);
             bgmSlider.SetValueWithoutNotify(0);
+            bgmToggle.SetIsOnWithoutNotify(true);
         }
         else
         {
@@ -71,7 +90,10 @@ public class AudioManager : MonoBehaviour
             var vol = DbToVol(db);
             mixer.SetFloat("BGM_ATTENUATION",db);
             bgmSlider.SetValueWithoutNotify(vol);
+            bgmToggle.SetIsOnWithoutNotify(false);
         }
+
+        PlayerPrefs.SetInt("BGM_MUTED", isMute ? 1 : 0);
     }
 
     public void SetSfxMute(bool isMute)
@@ -80,6 +102,7 @@ public class AudioManager : MonoBehaviour
         {
             mixer.SetFloat("SFX_ATTENUATION",-80);
             sfxSlider.SetValueWithoutNotify(0);
+            sfxToggle.SetIsOnWithoutNotify(true);
         }
         else
         {
@@ -87,7 +110,10 @@ public class AudioManager : MonoBehaviour
             var vol = DbToVol(db);
             mixer.SetFloat("SFX_ATTENUATION",db);
             sfxSlider.SetValueWithoutNotify(vol);
+            sfxToggle.SetIsOnWithoutNotify(false);
         }
+
+        PlayerPrefs.SetInt("SFX_MUTED", isMute ? 1 : 0);
     }
 
     private float DbToVol(float db)
