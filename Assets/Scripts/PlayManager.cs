@@ -41,7 +41,7 @@ public class PlayManager : MonoBehaviour
     
     public void GameOver()
     {
-        finishedText.text = "Game Over";
+        finishedText.text = "Game Over\nPlease Try Again!";
         finishedCanvas.SetActive(true);
     }
 

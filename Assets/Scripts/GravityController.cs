@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GravityController : MonoBehaviour
 {
-    [SerializeField] float acceleration = 9.81f;
+    [SerializeField] float acceleration = 98.1f;
 
     Vector3 gravityOffset = Vector3.zero;
 

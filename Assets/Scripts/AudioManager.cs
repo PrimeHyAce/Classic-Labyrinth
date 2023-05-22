@@ -20,21 +20,13 @@ public class AudioManager : MonoBehaviour
         var volBgm = DbToVol(dbBgm);
         mixer.SetFloat("BGM_ATTENUATION",dbBgm);
         bgmSlider.SetValueWithoutNotify(volBgm);
-        // check if bgm is muted
-        if(dbBgm == -80)
-        {
-            bgmToggle.SetIsOnWithoutNotify(true);
-        }
+        bgmToggle.isOn = dbBgm == -80 ? true : false;
 
         var dbSfx = PlayerPrefs.GetFloat("SFX_ATTENUATION",0);
         var volSfx = DbToVol(dbSfx);
         mixer.SetFloat("SFX_ATTENUATION",dbSfx);
         sfxSlider.SetValueWithoutNotify(volSfx);  
-        // check if sfx is muted
-        if(dbSfx == -80)
-        {
-            sfxToggle.SetIsOnWithoutNotify(true);
-        }     
+        sfxToggle.isOn = dbSfx == -80 ? true : false;       
     }
 
     private void OnEnable() {
